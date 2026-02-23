@@ -1,5 +1,6 @@
-public class SmsSender extends NotificationSender {
-    public SmsSender(AuditLog audit) { super(audit); }
+public class SmsSender implements NotificationSender {
+    private final AuditLog audit;
+    public SmsSender(AuditLog audit) { this.audit = audit; }
 
     @Override
     public void send(Notification n) {

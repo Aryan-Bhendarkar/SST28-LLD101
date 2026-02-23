@@ -5,10 +5,11 @@ public class Main {
 
         Notification n = new Notification("Welcome", "Hello and welcome to SST!", "riya@sst.edu", "9876543210");
 
-        NotificationSender email = new EmailSender(audit);
+        NotificationSender email = new TruncateSender(new EmailSender(audit), 40);
         NotificationSender sms = new SmsSender(audit);
-        NotificationSender wa = new WhatsAppSender(audit);
-
+        NotificationSender wa = new PhoneValidatingSender(new WhatsAppSender(audit));
+        NotificationSender push = new PushNotificationSender(audit);
+        
         email.send(n);
         sms.send(n);
         try {
