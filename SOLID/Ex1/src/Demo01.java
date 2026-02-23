@@ -1,7 +1,7 @@
 
 import java.util.Arrays;
 
-public class Main {
+public class Demo01{
     public static void main(String[] args) {
         FakeDb db = new FakeDb(); 
         StudentParser parser = new StudentParser();
