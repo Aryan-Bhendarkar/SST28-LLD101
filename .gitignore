@@ -13,3 +13,6 @@ Thumbs.db
 tmp/
 out/
 build/
+
+# Personal study notes
+STUDY_GUIDE.md
